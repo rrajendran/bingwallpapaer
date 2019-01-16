@@ -4,9 +4,9 @@
 # <bitbar.author>Ramesh Rajendran</bitbar.author>
 # <bitbar.author.github>rrajendran</bitbar.author.github>
 # <bitbar.desc>Set desktop wallpaper from bing wallpapers</bitbar.desc>
-# <bitbar.image>http://www.hosted-somewhere/pluginimage</bitbar.image>
+# <bitbar.image>https://raw.githubusercontent.com/rrajendran/bingwallpapaer/master/bing.png</bitbar.image>
 # <bitbar.dependencies>python3</bitbar.dependencies>
-# <bitbar.abouturl>http://url-to-about.com/</bitbar.abouturl>
+# <bitbar.abouturl>https://github.com/rrajendran/bingwallpapaer</bitbar.abouturl>
 import datetime
 import json
 import os
@@ -31,6 +31,7 @@ def join_path(*args):
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 save_dir = '/tmp/images'
+
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 
