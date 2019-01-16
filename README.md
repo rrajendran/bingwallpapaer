@@ -5,7 +5,7 @@ Set desktop wallpaper with bing's today's wallpaper
 - python3
 
 #Installation
-- `pip3 install -r requirements`
+- `pip3 install -r requirements.txt`
 - copy `wallpaper.1d.py` to your plugins folder
 - Refresh the bitbar
 
