@@ -56,10 +56,10 @@ def download_old_wallpapers(minus_days=False):
     If minus_days is given an integer a specific day in the past will be downloaded.
     """
     if minus_days:
-        download_wallpaper(idx=minus_days, use_wallpaper=False)
+        download_wallpaper(idx=minus_days, use_wallpaper=True)
         return
     for i in range(0, 20):  # max 20
-        download_wallpaper(idx=i, use_wallpaper=False)
+        download_wallpaper(idx=i, use_wallpaper=True)
 
 
 def download_wallpaper(idx=0, use_wallpaper=True):
@@ -92,11 +92,11 @@ def download_wallpaper(idx=0, use_wallpaper=True):
 
         image_url = url.replace('_1366x768', '_1920x1200')
 
-        print(title + " | href=" + image_url)
+        print(title + " | bash=echo $0")
 
         if os.path.isfile(pic_path):
             # print('Image of', date.strftime('%d-%m-%Y'), 'already downloaded.')
-            if use_wallpaper:
+            if use_wallpaper and idx == 0:
                 set_wallpaper(pic_path)
             return
         # print('Downloading: ', date.strftime('%d-%m-%Y'), 'index #', idx)
@@ -117,7 +117,7 @@ def download_wallpaper(idx=0, use_wallpaper=True):
 def main():
     print("|image=" + bing_icon)
     print("---")
-    download_wallpaper()
+    download_old_wallpapers()
 
 
 if __name__ == "__main__":
